@@ -31,6 +31,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const [active, setActive] = useState<PortfolioItem | null>(null);
+  const [list, setList] = useState<PortfolioItem[]>(PORTFOLIO);
   const showreelItem: PortfolioItem = {
     id: "showreel",
     title: "Showreel 2026",
@@ -50,9 +51,9 @@ function Index() {
       <div className="min-h-screen bg-background text-foreground bg-grain overflow-x-hidden">
         <SiteNav />
         <main>
-          <Hero onPlayShowreel={() => setActive(showreelItem)} />
+          <Hero onPlayShowreel={() => { setList([showreelItem]); setActive(showreelItem); }} />
           <Showreel />
-          <Portfolio onSelect={setActive} />
+          <Portfolio onSelect={(item, items) => { setList(items); setActive(item); }} />
           <Services />
           <BeforeAfter />
           <Tools />
@@ -62,7 +63,7 @@ function Index() {
         </main>
         <Footer />
         <WhatsAppFab />
-        <VideoModal item={active} onClose={() => setActive(null)} />
+        <VideoModal item={active} list={list} onClose={() => setActive(null)} onNavigate={setActive} />
         <Toaster />
       </div>
     </ThemeProvider>
