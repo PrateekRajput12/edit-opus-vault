@@ -21,6 +21,10 @@ export interface PortfolioItem {
   id: string;
   title: string;
   client: string;
+  clientType: string;
+  tools: string[];
+  duration: string;
+  year: number;
   category: Exclude<Category, "All">;
   thumb: string;
   video: string;
@@ -38,15 +42,15 @@ const V = {
 };
 
 export const PORTFOLIO: PortfolioItem[] = [
-  { id: "1", title: "Cardiology Clinic — Patient Story", client: "Dr. Mehra", category: "Doctor Reels", thumb: doctor, video: V.bunny, aspect: "vertical" },
-  { id: "2", title: "Skyline Villa — Cinematic Tour", client: "Atrium Realty", category: "Real Estate Ads", thumb: realestate, video: V.escapes, aspect: "horizontal" },
-  { id: "3", title: "10M Subs Special Edit", client: "Creator Studio", category: "YouTube Videos", thumb: youtube, video: V.fun, aspect: "horizontal" },
-  { id: "4", title: "Liquid Type Reel", client: "In-House", category: "Motion Graphics", thumb: motion, video: V.elephant, aspect: "horizontal" },
-  { id: "5", title: "Neon Future — AI Short", client: "Concept", category: "AI Videos", thumb: ai, video: V.blaze, aspect: "horizontal" },
-  { id: "6", title: "Glow Skincare — Launch Spot", client: "Glow Co.", category: "Social Media Ads", thumb: social, video: V.joy, aspect: "vertical" },
-  { id: "7", title: "Dental Reel — Smile Makeover", client: "Dr. Khan", category: "Doctor Reels", thumb: doctor, video: V.bunny, aspect: "vertical" },
-  { id: "8", title: "Penthouse Walkthrough", client: "Crest Estates", category: "Real Estate Ads", thumb: realestate, video: V.escapes, aspect: "horizontal" },
-  { id: "9", title: "Vlog Opener Sequence", client: "TravelByMo", category: "YouTube Videos", thumb: youtube, video: V.fun, aspect: "horizontal" },
+  { id: "1", title: "Cardiology Clinic — Patient Story", client: "Dr. Mehra", clientType: "Healthcare Brand", tools: ["Premiere Pro", "After Effects", "DaVinci"], duration: "0:58", year: 2025, category: "Doctor Reels", thumb: doctor, video: V.bunny, aspect: "vertical" },
+  { id: "2", title: "Skyline Villa — Cinematic Tour", client: "Atrium Realty", clientType: "Real Estate Agency", tools: ["Premiere Pro", "DaVinci", "After Effects"], duration: "1:42", year: 2025, category: "Real Estate Ads", thumb: realestate, video: V.escapes, aspect: "horizontal" },
+  { id: "3", title: "10M Subs Special Edit", client: "Creator Studio", clientType: "YouTube Creator", tools: ["Premiere Pro", "After Effects", "Photoshop"], duration: "12:18", year: 2024, category: "YouTube Videos", thumb: youtube, video: V.fun, aspect: "horizontal" },
+  { id: "4", title: "Liquid Type Reel", client: "In-House", clientType: "Studio Project", tools: ["After Effects", "Cinema 4D", "Photoshop"], duration: "0:45", year: 2025, category: "Motion Graphics", thumb: motion, video: V.elephant, aspect: "horizontal" },
+  { id: "5", title: "Neon Future — AI Short", client: "Concept", clientType: "Personal Project", tools: ["Runway ML", "Midjourney", "Premiere Pro"], duration: "1:10", year: 2025, category: "AI Videos", thumb: ai, video: V.blaze, aspect: "horizontal" },
+  { id: "6", title: "Glow Skincare — Launch Spot", client: "Glow Co.", clientType: "DTC Brand", tools: ["Premiere Pro", "After Effects", "Canva"], duration: "0:30", year: 2025, category: "Social Media Ads", thumb: social, video: V.joy, aspect: "vertical" },
+  { id: "7", title: "Dental Reel — Smile Makeover", client: "Dr. Khan", clientType: "Healthcare Brand", tools: ["Premiere Pro", "DaVinci"], duration: "0:48", year: 2025, category: "Doctor Reels", thumb: doctor, video: V.bunny, aspect: "vertical" },
+  { id: "8", title: "Penthouse Walkthrough", client: "Crest Estates", clientType: "Real Estate Agency", tools: ["Premiere Pro", "After Effects"], duration: "2:05", year: 2024, category: "Real Estate Ads", thumb: realestate, video: V.escapes, aspect: "horizontal" },
+  { id: "9", title: "Vlog Opener Sequence", client: "TravelByMo", clientType: "YouTube Creator", tools: ["After Effects", "Premiere Pro"], duration: "0:22", year: 2025, category: "YouTube Videos", thumb: youtube, video: V.fun, aspect: "horizontal" },
 ];
 
 export const SERVICES = [
