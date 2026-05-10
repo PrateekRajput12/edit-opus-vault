@@ -75,5 +75,4 @@ export const PACKAGES = [
   },
 ];
 
-export const SHOWREEL_VIDEO = "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4";
 export const SHOWREEL_POSTER = "/images/showreel-poster.jpg";
