@@ -41,6 +41,8 @@ function Index() {
     duration: "1:32",
     year: 2026,
     category: "Motion Graphics",
+    thumbnailUrl: PORTFOLIO[0].thumbnailUrl,
+    videoUrl: PORTFOLIO[3].videoUrl,
     thumb: PORTFOLIO[0].thumb,
     video: PORTFOLIO[3].video,
     aspect: "horizontal",
