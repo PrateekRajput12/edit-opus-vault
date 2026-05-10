@@ -21,6 +21,10 @@ export interface PortfolioItem {
   id: string;
   title: string;
   client: string;
+  clientType: string;
+  tools: string[];
+  duration: string;
+  year: number;
   category: Exclude<Category, "All">;
   thumb: string;
   video: string;
